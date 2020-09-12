@@ -1,0 +1,45 @@
+<html>
+    <head>
+         <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
+
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+        <h1>Info Board</h1>
+
+        <div class="content">
+
+            <form id="add-info-form">
+                <input type="text" name="name" placeholder="Poster Name">
+                <input type="text" name="information" placeholder="Input Your Information">
+                <button>Add Info</button>
+            </form>
+
+            <ul id="info-list"></ul>
+
+        </div>
+
+       
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCWsLlvBHPKZZGIJgkPpXL44s34jnZBa1E",
+    authDomain: "info-board-944e8.firebaseapp.com",
+    databaseURL: "https://info-board-944e8.firebaseio.com",
+    projectId: "info-board-944e8",
+    storageBucket: "info-board-944e8.appspot.com",
+    messagingSenderId: "248602043982",
+    appId: "1:248602043982:web:79665be8bf47fce5be451f"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+  db.settings({ timestampsInSnapshots: true});
+</script>
+
+        <script src="app.js"></script>
+    </body>
+</html>
